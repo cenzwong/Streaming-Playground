@@ -4,8 +4,7 @@ from .title_basics import *
 from .title_crew import *
 from .title_episode import *
 from .title_principals import *
-
-from .title_rating import *
+from .title_ratings import *
 
 __all__ = [
     "name_basics",
@@ -14,5 +13,5 @@ __all__ = [
     "title_crew",
     "title_episode",
     "title_principals",
-    "title_rating",
+    "title_ratings",
 ]
