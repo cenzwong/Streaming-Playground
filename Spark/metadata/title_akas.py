@@ -12,7 +12,7 @@ from pyspark.sql import types as T
 # isOriginalTitle (boolean) - 0: not original title; 1: original title
 schema = T.StructType(
     [
-        T.StructField("titleId", T.StringType(), True),
+        T.StructField("tconst", T.StringType(), True),
         T.StructField("ordering", T.IntegerType(), True),
         T.StructField("title", T.StringType(), True),
         T.StructField("region", T.StringType(), True),

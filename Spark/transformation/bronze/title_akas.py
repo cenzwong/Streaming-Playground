@@ -1,3 +1,9 @@
+"""Summary of transformation
+- Renaming `titleID` to `tconst`
+- Spliting `types` and `attributes` to list
+- Casting `isOriginalTitle` to bool
+"""
+
 import metadata
 import pyspark_functions as F_
 from pyspark.sql import DataFrame
@@ -7,7 +13,7 @@ from pyspark.sql import types as T
 
 def transformation(sdf) -> DataFrame:
     return sdf.select(
-        F.col("titleId"),
+        F.col("titleId").alias("tconst"),
         F.col("ordering").cast(T.IntegerType()),
         F.col("title"),
         F.col("region"),
