@@ -1,1 +1,1 @@
-isort . && black .
+isort . && black . && pylint .

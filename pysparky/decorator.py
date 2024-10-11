@@ -1,3 +1,7 @@
+"""
+This module stores decorator that extend the capability of the pyspark functions
+"""
+
 import functools
 
 from pyspark.sql import functions as F

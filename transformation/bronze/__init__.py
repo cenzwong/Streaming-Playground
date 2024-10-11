@@ -1,3 +1,7 @@
+"""
+Import all the transformation function when you import transformation.bronze
+"""
+
 from .name_basics import *
 from .title_akas import *
 from .title_basics import *

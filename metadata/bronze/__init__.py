@@ -1,3 +1,7 @@
+"""
+Import all the SCHEMA when you import metadata
+"""
+
 from .name_basics import *
 from .title_akas import *
 from .title_basics import *
