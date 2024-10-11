@@ -11,9 +11,9 @@ def test_when_mapping(spark):
         2. Mapping using Column object.
     """
     dict_ = {1: "a", 2: "b", 3: "c"}
-    input_sdf = spark.createDataFrame(data=[(1,), (2,), (3,)], SCHEMA=["key"])
+    input_sdf = spark.createDataFrame(data=[(1,), (2,), (3,)], schema=["key"])
     expected_sdf = spark.createDataFrame(
-        data=[(1, "a"), (2, "b"), (3, "c")], SCHEMA=["key", "value"]
+        data=[(1, "a"), (2, "b"), (3, "c")], schema=["key", "value"]
     )
     actual_sdf = input_sdf.withColumn(
         "value", F_.when_mapping(column_or_name="key", dict_=dict_)

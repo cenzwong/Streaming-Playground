@@ -6,10 +6,6 @@ You could treat this module as the extension of the pyspark.sql.functions
 from pyspark.sql import Column
 from pyspark.sql import functions as F
 
-from pysparky import decorator
-
-
-@decorator.pyspark_column_or_name_enabler("column_or_name")
 def when_mapping(column_or_name: Column | str, dict_: dict) -> Column:
     """
     Maps values in a column based on a dictionary of conditions using PySpark.
@@ -39,6 +35,9 @@ def when_mapping(column_or_name: Column | str, dict_: dict) -> Column:
         |     C|     3|
         +------+------+
     """
+    column_or_name = (
+        F.col(column_or_name) if isinstance(column_or_name, str) else column_or_name
+    )
     base_output = F
     for cond, val in dict_.items():
         base_output = base_output.when(column_or_name == cond, val)
