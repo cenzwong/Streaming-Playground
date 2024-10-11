@@ -18,8 +18,8 @@ def task2a(
     most_credited_person_for_top10_movies_sdf = (
         top10_movies_with_credited_person_sdf.groupBy("nconst")
         .count()
-        .orderBy(F.col("count").desc())
-        .limit(1)
+        .groupBy()
+        .agg(F.max_by("nconst", "count").alias("nconst"))
     )
 
     most_credited_person_for_top10_movies_with_names_sdf = (

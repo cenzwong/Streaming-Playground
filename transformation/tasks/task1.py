@@ -10,20 +10,20 @@ def task1(
         "tconst", "primaryTitle"
     )
 
-    ranked_title_sdf = title_ratings_sdf.join(
-        # Filtering the ratings table to movie only
-        title_movie_sdf,
-        on="tconst",
-        how="inner",
-    ).select(
-        "tconst",
-        "primaryTitle",
-        F.col("numVotes"),
-        ranking_logics.alias("ranking"),
-    )
-
     top_10_movies_with_min_500_votes_sdf = (
-        ranked_title_sdf.filter(F.col("numVotes") >= 500)
+        title_ratings_sdf.filter(F.col("numVotes") >= 500)
+        .join(
+            # Filtering the ratings table to movie only
+            title_movie_sdf,
+            on="tconst",
+            how="inner",
+        )
+        .select(
+            "tconst",
+            "primaryTitle",
+            F.col("numVotes"),
+            ranking_logics.alias("ranking"),
+        )
         .orderBy(F.col("ranking").desc())
         .limit(10)
     )

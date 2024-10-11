@@ -26,7 +26,7 @@ SCHEMA = T.StructType(
         T.StructField("originalTitle", T.StringType(), True),
         T.StructField("isAdult", T.BooleanType(), True),
         T.StructField("startYear", T.IntegerType(), True),
-        T.StructField("endYear", T.StringType(), True),
+        T.StructField("endYear", T.IntegerType(), True),
         T.StructField("runtimeMinutes", T.IntegerType(), True),
         T.StructField("genres", T.ArrayType(T.StringType()), True),
     ]
