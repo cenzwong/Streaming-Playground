@@ -7,7 +7,7 @@ from pyspark.sql import DataFrame
 from pyspark.sql import functions as F
 from pyspark.sql import types as T
 
-from metadata.bronze import title_episode
+import metadata
 
 
 def transformation(sdf) -> DataFrame:
@@ -35,4 +35,4 @@ def transformation(sdf) -> DataFrame:
         F.col("parentTconst"),
         F.col("seasonNumber").cast(T.IntegerType()),
         F.col("episodeNumber").cast(T.IntegerType()),
-    ).to(title_episode.SCHEMA)
+    ).to(metadata.bronze.title_episode.SCHEMA)

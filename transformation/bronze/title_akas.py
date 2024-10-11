@@ -8,7 +8,7 @@ from pyspark.sql import DataFrame
 from pyspark.sql import functions as F
 from pyspark.sql import types as T
 
-from metadata.bronze import title_akas
+import metadata
 from pysparky import functions as F_
 
 
@@ -50,4 +50,4 @@ def transformation(sdf) -> DataFrame:
         F_.when_mapping(F.col("isOriginalTitle"), {1: True, 0: False}).alias(
             "isOriginalTitle"
         ),
-    ).to(title_akas.SCHEMA)
+    ).to(metadata.bronze.title_akas.SCHEMA)

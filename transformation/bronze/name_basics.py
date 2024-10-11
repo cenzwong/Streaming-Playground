@@ -7,7 +7,7 @@ from pyspark.sql import DataFrame
 from pyspark.sql import functions as F
 from pyspark.sql import types as T
 
-from metadata.bronze import name_basics
+import metadata
 
 
 def transformation(sdf) -> DataFrame:
@@ -42,4 +42,4 @@ def transformation(sdf) -> DataFrame:
         F.col("deathYear").cast(T.IntegerType()),
         F.split("primaryProfession", pattern=" ").alias("primaryProfession"),
         F.split("knownForTitles", pattern=" ").alias("knownForTitles"),
-    ).to(name_basics.SCHEMA)
+    ).to(metadata.bronze.name_basics.SCHEMA)

@@ -6,7 +6,7 @@ from pyspark.sql import DataFrame
 from pyspark.sql import functions as F
 from pyspark.sql import types as T
 
-from metadata.bronze import title_ratings
+import metadata
 
 
 def transformation(sdf: DataFrame) -> DataFrame:
@@ -29,4 +29,4 @@ def transformation(sdf: DataFrame) -> DataFrame:
         F.col("tconst"),
         F.col("averageRating").cast(T.IntegerType()),
         F.col("numVotes").cast(T.IntegerType()),
-    ).to(title_ratings.SCHEMA)
+    ).to(metadata.bronze.title_ratings.SCHEMA)

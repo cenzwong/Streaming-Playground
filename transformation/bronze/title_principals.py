@@ -8,7 +8,7 @@ from pyspark.sql import DataFrame
 from pyspark.sql import functions as F
 from pyspark.sql import types as T
 
-from metadata.bronze import title_principals
+import metadata
 
 
 def transformation(sdf: DataFrame) -> DataFrame:
@@ -45,4 +45,4 @@ def transformation(sdf: DataFrame) -> DataFrame:
         F.regexp_extract("characters", pattern=r'\["([^"]+)"\]', idx=1).alias(
             "characters"
         ),
-    ).to(title_principals.SCHEMA)
+    ).to(metadata.bronze.title_principals.SCHEMA)

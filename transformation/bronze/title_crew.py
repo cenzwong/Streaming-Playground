@@ -7,8 +7,7 @@ Summary of transformation:
 from pyspark.sql import DataFrame
 from pyspark.sql import functions as F
 
-from metadata.bronze import title_crew
-
+import metadata
 
 def transformation(sdf) -> DataFrame:
     """
@@ -32,4 +31,4 @@ def transformation(sdf) -> DataFrame:
         F.col("tconst"),
         F.split("directors", pattern=",").alias("directors"),
         F.split("writers", pattern=",").alias("writers"),
-    ).to(title_crew.SCHEMA)
+    ).to(metadata.bronze.title_crew.SCHEMA)

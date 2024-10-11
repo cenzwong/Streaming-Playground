@@ -8,7 +8,7 @@ from pyspark.sql import DataFrame
 from pyspark.sql import functions as F
 from pyspark.sql import types as T
 
-from metadata.bronze import title_basics
+import metadata
 from pysparky import functions as F_
 
 
@@ -53,4 +53,4 @@ def transformation(sdf) -> DataFrame:
         F.col("endYear").cast(T.IntegerType()),
         F.col("runtimeMinutes").cast(T.IntegerType()),
         F.split("genres", pattern=",").alias("genres"),
-    ).to(title_basics.SCHEMA)
+    ).to(metadata.bronze.title_basics.SCHEMA)
