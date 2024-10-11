@@ -6,6 +6,7 @@ You could treat this module as the extension of the pyspark.sql.functions
 from pyspark.sql import Column
 from pyspark.sql import functions as F
 
+
 def when_mapping(column_or_name: Column | str, dict_: dict) -> Column:
     """
     Maps values in a column based on a dictionary of conditions using PySpark.
