@@ -9,6 +9,7 @@ from pyspark.sql import functions as F
 
 import metadata
 
+
 def transformation(sdf) -> DataFrame:
     """
     Transforms the input Spark DataFrame by selecting specific columns and splitting strings into arrays.
