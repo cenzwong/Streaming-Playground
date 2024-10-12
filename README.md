@@ -23,3 +23,11 @@ Data Processing Architectures
 ```
 zcat data/input/raw/title.ratings.tsv.gz | split -l 100000 --additional-suffix=.tsv - "data/input/title_ratings/title.ratings-"
 ```
+
+## Preparing environemnet
+```
+zcat data/input/raw/title.ratings.tsv.gz | split -l 100000 --additional-suffix=.tsv - "data/input/title_ratings/title.ratings-"
+
+mv data/archive/title_ratings/workspaces/Streaming-Playground/data/input/title_ratings/*.tsv data/input/title_ratings
+rm -rf data/.ckpt
+```

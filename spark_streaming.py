@@ -6,6 +6,7 @@ from pyspark.sql import functions as F
 spark = SparkSession.builder.appName("imdb_query_streaming").getOrCreate()
 spark.conf.set("spark.sql.streaming.forceDeleteTempCheckpointLocation", True)
 spark.conf.set("spark.sql.shuffle.partitions", 4)
+spark.conf.set("spark.sql.streaming.statefulOperator.checkCorrectness.enabled", False)
 
 # %%
 from pathlib import Path
@@ -17,18 +18,18 @@ imdb_tables = {}
 from metadata import raw
 
 raw_schema = {
-    # "name_basics": raw.name_basics.SCHEMA,
+    "name_basics": raw.name_basics.SCHEMA,
     # "title_akas": raw.title_akas.SCHEMA,
     "title_basics": raw.title_basics.SCHEMA,
     # # "title_crew": raw.title_crew.SCHEMA,
     # # "title_episode": raw.title_episode.SCHEMA,
-    # "title_principals": raw.title_principals.SCHEMA,
+    "title_principals": raw.title_principals.SCHEMA,
     "title_ratings": raw.title_ratings.SCHEMA,
 }
 
 reader_options = {
     "sep": "\t",
-    "header": True,
+    # "header": True,
     "nullValue": r"\N",
     # "compression": "gzip",
     "cleanSource": "archive",
@@ -56,26 +57,28 @@ imdb_tables["title_basics"] = (
     .csv(f"{data_folder}/{"title_basics"}")
 )
 
-# Read streaming data
-# for file in data_folder.glob("**/*.tsv.gz"):
-#     table_name = "_".join(file.name.split(".")[:2])
-#     print(table_name)
-#     imdb_tables[table_name] = (
-#         spark.readStream.options(**reader_options)
-#         .schema(raw_schema[table_name])
-#         .csv(f"{data_folder}/{table_name}")
-#     )
+imdb_tables["name_basics"] = (
+    spark.read.options(**batch_reader_options)
+    .schema(raw_schema["name_basics"])
+    .csv(f"{data_folder}/{"name_basics"}")
+)
+
+imdb_tables["title_principals"] = (
+    spark.read.options(**batch_reader_options)
+    .schema(raw_schema["title_principals"])
+    .csv(f"{data_folder}/{"title_principals"}")
+)
 
 # %%
 from transformation import bronze as xform_bronze
 
 bronze_transformation = {
-    # "name_basics": xform_bronze.name_basics.transformation,
+    "name_basics": xform_bronze.name_basics.transformation,
     # "title_akas": xform_bronze.title_akas.transformation,
     "title_basics": xform_bronze.title_basics.transformation,
     # # # "title_crew": xform_bronze.title_crew.transformation,
     # # # "title_episode": xform_bronze.title_episode.transformation,
-    # "title_principals": xform_bronze.title_principals.transformation,
+    "title_principals": xform_bronze.title_principals.transformation,
     "title_ratings": xform_bronze.title_ratings.transformation,
 }
 
@@ -85,7 +88,7 @@ cleansed_imdb_tables = {
 }
 
 # %%
-from transformation.streaming import task1
+from transformation.streaming import task1, task2a
 
 # %%
 # Ranking Logics is given from the PDF
@@ -113,20 +116,20 @@ query1 = (
 
 # %%
 # Task 2a: List the persons who are most often credited
-# query2a = (
-#     task2a(
-#         top_10_movies_with_min_500_votes_sdf,
-#         title_principals_sdf=cleansed_imdb_tables["title_principals"],
-#         name_basics_sdf=cleansed_imdb_tables["name_basics"],
-#     )
-#     .writeStream.outputMode("complete")
-#     .options(
-#         path="data/output/query2a",
-#         checkpointLocation = "data/.ckpt/q2a"
-#     )
-#     .format("csv")
-#     .start()
-# )
+query2a = (
+    task2a(
+        top_10_movies_with_min_500_votes_sdf,
+        title_principals_sdf=cleansed_imdb_tables["title_principals"],
+        name_basics_sdf=cleansed_imdb_tables["name_basics"],
+    )
+    .writeStream.outputMode("complete")
+    .options(
+        path="data/output/query2a",
+        checkpointLocation = "data/.ckpt/q2a"
+    )
+    .format("console")
+    .start()
+)
 
 # %%
 # Task 2b: List the different titles of the 10 movies
