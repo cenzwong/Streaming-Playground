@@ -10,12 +10,11 @@ from pyspark.sql import types as T
 import metadata
 
 
+# @quality.expect_unique("nconst")
 def transformation(sdf) -> DataFrame:
     """
     Transforms the input Spark DataFrame by selecting specific columns, casting data types,
     and splitting strings into arrays.
-
-
 
     Args:
         sdf (DataFrame): Input Spark DataFrame containing the following columns:
