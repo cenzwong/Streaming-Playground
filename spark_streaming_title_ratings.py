@@ -34,7 +34,7 @@ reader_options = {
 imdb_tables["title_ratings"] = (
     spark.readStream.options(**reader_options)
     .schema(raw_schema["title_ratings"])
-    .csv(f"{data_folder}/{"title_ratings"}")
+    .csv(f"{data_folder}/title_ratings")
 )
 
 
