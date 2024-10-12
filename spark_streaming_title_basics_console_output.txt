@@ -1,0 +1,228 @@
+-------------------------------------------
+Batch: 0
+-------------------------------------------
++---------+------------------------------+---------+
+|tconst   |primaryTitle                  |titleType|
++---------+------------------------------+---------+
+|tt0000009|Miss Jerry                    |movie    |
+|tt0000147|The Corbett-Fitzsimmons Fight |movie    |
+|tt0000502|Bohemios                      |movie    |
+|tt0000574|The Story of the Kelly Gang   |movie    |
+|tt0000591|The Prodigal Son              |movie    |
+|tt0000615|Robbery Under Arms            |movie    |
+|tt0000630|Hamlet                        |movie    |
+|tt0000675|Don Quijote                   |movie    |
+|tt0000679|The Fairylogue and Radio-Plays|movie    |
+|tt0000838|A Cultura do Cacau            |movie    |
++---------+------------------------------+---------+
+only showing top 10 rows
+
+-------------------------------------------
+Batch: 1
+-------------------------------------------
++----------+--------------------------------+---------+
+|tconst    |primaryTitle                    |titleType|
++----------+--------------------------------+---------+
+|tt10058744|Urgence de femme                |movie    |
+|tt10058864|The Third Strike                |movie    |
+|tt10058890|Lonesome Boy                    |movie    |
+|tt10058892|The Journey of Monalisa         |movie    |
+|tt10059088|Little League Charlie           |movie    |
+|tt10059182|La otra parte                   |movie    |
+|tt10059220|Blood of God                    |movie    |
+|tt10059236|My Second Year in College       |movie    |
+|tt10059252|Un hombre alado                 |movie    |
+|tt10059254|Devil Put the Coal in the Ground|movie    |
++----------+--------------------------------+---------+
+only showing top 10 rows
+
+-------------------------------------------
+Batch: 2
+-------------------------------------------
++----------+------------------------------+---------+
+|tconst    |primaryTitle                  |titleType|
++----------+------------------------------+---------+
+|tt11860804|Kanekô harutaro               |movie    |
+|tt11860832|Hiddah                        |movie    |
+|tt11860834|Hanafubuki shinpachi          |movie    |
+|tt11860862|Shihana                       |movie    |
+|tt11860864|Katakiuchi dôchû sugoroku (II)|movie    |
+|tt11860882|Dekoboko niningumi            |movie    |
+|tt11860914|Món Cavall Fort               |movie    |
+|tt11860976|Pere Tarrés (1905 - 1950)     |movie    |
+|tt11861034|Mickey on the Road            |movie    |
+|tt11861154|Jack and the Beanstalk        |movie    |
++----------+------------------------------+---------+
+only showing top 10 rows
+
+-------------------------------------------
+Batch: 3
+-------------------------------------------
++----------+---------------------------------------+---------+
+|tconst    |primaryTitle                           |titleType|
++----------+---------------------------------------+---------+
+|tt13726566|2020 in Prophecy                       |movie    |
+|tt1372680 |0s & 1s                                |movie    |
+|tt1372681 |Aa Dekhen Zara                         |movie    |
+|tt1372682 |Avé Maria                              |movie    |
+|tt1372685 |The Story of Me                        |movie    |
+|tt13726852|The Intruder                           |movie    |
+|tt1372686 |Coriolanus                             |movie    |
+|tt1372687 |The Blacks                             |movie    |
+|tt1372688 |Digmaan... Sa pagitan ng langit at lupa|movie    |
+|tt1372689 |Stranded                               |movie    |
++----------+---------------------------------------+---------+
+only showing top 10 rows
+
+-------------------------------------------
+Batch: 4
+-------------------------------------------
++----------+--------------------------------------------------------------------------------+---------+
+|tconst    |primaryTitle                                                                    |titleType|
++----------+--------------------------------------------------------------------------------+---------+
+|tt1557181 |Chasing Darkness                                                                |movie    |
+|tt1557182 |Cheap                                                                           |movie    |
+|tt1557190 |Comment j'ai adopté mes parents                                                 |movie    |
+|tt1557197 |Deep River: The Island                                                          |movie    |
+|tt1557199 |Deti nasich rodicu, aneb Jak se kalifornsky surfar naucil mit rad Ceskoslovensko|movie    |
+|tt1557212 |Endangered Species: California Fish and Game Wardens                            |movie    |
+|tt1557215 |Kairo All Inklusive                                                             |movie    |
+|tt1557216 |Random                                                                          |movie    |
+|tt15572252|The Return of the Black Panther                                                 |movie    |
+|tt15572260|On the Battlefield                                                              |movie    |
++----------+--------------------------------------------------------------------------------+---------+
+only showing top 10 rows
+
+-------------------------------------------
+Batch: 5
+-------------------------------------------
++----------+----------------------------------------+---------+
+|tconst    |primaryTitle                            |titleType|
++----------+----------------------------------------+---------+
+|tt1937463 |Wild View: A Journey to a Wondrous World|movie    |
+|tt1937464 |William Kentridge: Anything Is Possible |movie    |
+|tt1937473 |Gone                                    |movie    |
+|tt19374770|All for Love                            |movie    |
+|tt1937484 |...Und Exitus                           |movie    |
+|tt1937493 |How to Score Your Life                  |movie    |
+|tt19374940|K.O. Club                               |movie    |
+|tt1937495 |Jesus Hates Zombies                     |movie    |
+|tt1937497 |Keine Kameraden                         |movie    |
+|tt1937498 |Lawnswood Gardens                       |movie    |
++----------+----------------------------------------+---------+
+only showing top 10 rows
+
+-------------------------------------------
+Batch: 6
+-------------------------------------------
++----------+---------------------------------------------------------+---------+
+|tconst    |primaryTitle                                             |titleType|
++----------+---------------------------------------------------------+---------+
+|tt23830206|Veer gatha                                               |movie    |
+|tt23830268|Homini lupus                                             |movie    |
+|tt23830272|Aldeotas                                                 |movie    |
+|tt23830338|My Ex Is My Next                                         |movie    |
+|tt23830404|Ico: Light & Shadow                                      |movie    |
+|tt23830430|Die Moral von der Geschicht'- Mit Collien Ulmen-Fernandes|movie    |
+|tt23830448|To Dye For: The Documentary                              |movie    |
+|tt23830450|Love at First City                                       |movie    |
+|tt23830462|Uwaki                                                    |movie    |
+|tt23830470|Il Cristo in gola                                        |movie    |
++----------+---------------------------------------------------------+---------+
+only showing top 10 rows
+
+-------------------------------------------
+Batch: 7
+-------------------------------------------
++----------+---------------------------------+---------+
+|tconst    |primaryTitle                     |titleType|
++----------+---------------------------------+---------+
+|tt2909922 |Lepo vreme za mlad grasak, Purisa|movie    |
+|tt2909926 |Le piccole idee                  |movie    |
+|tt2909932 |Subconscious                     |movie    |
+|tt29099328|Crimson Knights                  |movie    |
+|tt29099404|Kappu Kola                       |movie    |
+|tt2909944 |Midnight in the Heart of Mancreet|movie    |
+|tt2909956 |Black Eros                       |movie    |
+|tt2909958 |A vos marques... Prêts!          |movie    |
+|tt2909966 |The Neon Dead                    |movie    |
+|tt29099748|Por siempre Fangio               |movie    |
++----------+---------------------------------+---------+
+only showing top 10 rows
+
+-------------------------------------------
+Batch: 8
+-------------------------------------------
++----------+--------------------------------------------------+---------+
+|tconst    |primaryTitle                                      |titleType|
++----------+--------------------------------------------------+---------+
+|tt33067429|Submarine 707: Deep Sea Fleet                     |movie    |
+|tt3306776 |Bayonetta: Bloody Fate                            |movie    |
+|tt33068019|Hick                                              |movie    |
+|tt33068274|Five Nights at Freddy's: The Last Night           |movie    |
+|tt3306854 |The Idolmaster Movie: Beyond the Brilliant Future!|movie    |
+|tt33068551|James 'Super Chikan' Johnson - A Life in Blues    |movie    |
+|tt3306858 |Als wir träumten                                  |movie    |
+|tt33068674|Overture                                          |movie    |
+|tt33068846|Detective Dee- Tong Tian Shen Jiao                |movie    |
+|tt33068848|PROs & CONs: Barriers                             |movie    |
++----------+--------------------------------------------------+---------+
+only showing top 10 rows
+
+-------------------------------------------
+Batch: 9
+-------------------------------------------
++---------+----------------------------+---------+
+|tconst   |primaryTitle                |titleType|
++---------+----------------------------+---------+
+|tt5171596|Geom                        |movie    |
+|tt5171598|Power Rangers: Zenith       |movie    |
+|tt5171636|Knuckle Bones               |movie    |
+|tt5171650|Midas                       |movie    |
+|tt5171656|Timegate                    |movie    |
+|tt5171664|Mobbing: La Intimidacion    |movie    |
+|tt5171724|The 1st Annual Carney Awards|movie    |
+|tt5171816|Ce qu'il ne faut pas dire   |movie    |
+|tt5171828|Forward                     |movie    |
+|tt5171868|Running Lover               |movie    |
++---------+----------------------------+---------+
+only showing top 10 rows
+
+-------------------------------------------
+Batch: 10
+-------------------------------------------
++---------+--------------------------------+---------+
+|tconst   |primaryTitle                    |titleType|
++---------+--------------------------------+---------+
+|tt7415926|Charlie Lucky                   |movie    |
+|tt7416016|Skarbek                         |movie    |
+|tt7416032|Sakalakala Sambandhi            |movie    |
+|tt7416062|New Voices in an Old Flower     |movie    |
+|tt7416102|Be Prepared                     |movie    |
+|tt7416110|A Four-Sided Bed                |movie    |
+|tt7416164|Kisaragî kyûbei nênryu mûtekihen|movie    |
+|tt7416240|Kisaragî kyûbei                 |movie    |
+|tt7416272|Myohôin kanpachî: kôhen         |movie    |
+|tt7416362|Kotengu mushukujin              |movie    |
++---------+--------------------------------+---------+
+only showing top 10 rows
+
+-------------------------------------------
+Batch: 11
+-------------------------------------------
++---------+---------------------------+---------+
+|tconst   |primaryTitle               |titleType|
++---------+---------------------------+---------+
+|tt9599124|My Ascension               |movie    |
+|tt9599402|More Joy Less Pain         |movie    |
+|tt9599482|The Young Dragons          |movie    |
+|tt9599812|Shinkon jidai              |movie    |
+|tt9599986|There Goes the Trailerhood!|movie    |
+|tt9600042|Charlie Karma              |movie    |
+|tt9600076|Namida no wataridori       |movie    |
+|tt9600178|Mnahi                      |movie    |
+|tt9600238|A Puerta Cerrada           |movie    |
+|tt9600274|Colonials                  |movie    |
++---------+---------------------------+---------+
+only showing top 10 rows
+

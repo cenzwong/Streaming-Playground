@@ -38,14 +38,27 @@ def task1(
     )
 
     if title_ratings_sdf.isStreaming:
-        title_ratings_sdf = title_ratings_sdf.withColumn(
-            "timestamp", F.current_timestamp()
-        )
 
-        title_ratings_windowed_sdf = (
+        movies_with_ranking_sdf = (
             title_ratings_sdf.filter(F.col("numVotes") >= 500)
-            .withColumn("ranking", ranking_logics)
-            .groupBy(F.window(F.col("timestamp"), "5 seconds"), F.col("tconst"))
+            .join(
+                # Filtering the ratings table to movie only
+                title_movie_sdf,
+                on="tconst",
+                how="inner",
+            )
+            .select(
+                F.current_timestamp().alias("timestamp"),
+                "tconst",
+                "primaryTitle",
+                F.col("numVotes"),
+                ranking_logics.alias("ranking"),
+            )
+            .groupBy(
+                F.window(F.col("timestamp"), "5 seconds"),
+                F.col("tconst"),
+                F.col("primaryTitle"),
+            )
             .agg(
                 F.max("numVotes").alias("numVotes"),
                 F.max("ranking").alias("ranking"),
@@ -54,17 +67,6 @@ def task1(
             .limit(10)
         )
 
-        movies_with_ranking_sdf = title_ratings_windowed_sdf.join(
-            # Filtering the ratings table to movie only
-            title_movie_sdf,
-            on="tconst",
-            how="inner",
-        ).select(
-            "tconst",
-            "primaryTitle",
-            F.col("numVotes"),
-            F.col("ranking"),
-        )
     else:
         raise Exception("title_ratings_sdf should be a streaming table.")
 

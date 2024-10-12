@@ -82,6 +82,8 @@ You are now set for running spark_batch.ipynb
 
 Run the `spark_batch.ipynb`
 
+![](https://github.com/cenzwong/imdbws-erdigram/blob/main/output/pipeline_split.png?raw=true)
+
 ## Preparing Stream Data
 
 To illustrate different files landing in the folder, we will `split` the files into smaller ones and pass those files into the streaming engine. `zcat`/`gzcat` is used for reading `gzip` files, and the output files are not zipped.

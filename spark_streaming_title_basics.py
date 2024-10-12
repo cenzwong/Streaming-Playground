@@ -58,7 +58,13 @@ title_movies_sdf = task0(
 
 # %%
 # Write the output to the console
-writer_options = {"path": "data/output/query0", "checkpointLocation": "data/.ckpt/q0"}
+writer_options = {
+    "path": "data/output/query0",
+    "checkpointLocation": "data/.ckpt/q0",
+    "truncate": False,
+    "numRows": 10,
+}
+
 query0 = (
     title_movies_sdf.writeStream.outputMode("append")
     .options(**writer_options)

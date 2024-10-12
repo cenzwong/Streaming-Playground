@@ -83,7 +83,12 @@ top_10_movies_with_min_500_votes_sdf = task1(
 
 # %%
 # Write the output to the console
-writer_options = {"path": "data/output/query1", "checkpointLocation": "data/.ckpt/q1"}
+writer_options = {
+    "path": "data/output/query1",
+    "checkpointLocation": "data/.ckpt/q1",
+    "truncate": False,
+}
+
 query1 = (
     top_10_movies_with_min_500_votes_sdf.writeStream.outputMode("complete")
     .options(**writer_options)
