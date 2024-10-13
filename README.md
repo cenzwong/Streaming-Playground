@@ -107,6 +107,9 @@ for f in data/input/title_ratings/title.ratings-*; do mv "$f" "$f.tsv"; done
 ```
 
 ## Streaming Processing
+
+<img width="1346" alt="image" src="https://github.com/user-attachments/assets/45eeb0e7-74d0-473e-972b-96434169b493">
+
 Run the streaming scripts to process the data:
 
 ```bash
