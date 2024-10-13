@@ -75,9 +75,9 @@ ranking_logics = (
     # / F.lit(average_number_of_voters)
 )
 # top_10_movies_with_min_500_votes_sdf
-top_10_movies_with_min_500_votes_sdf = task1(
+top_10_movies_with_min_500_votes_ssdf = task1(
     title_basics_sdf=cleansed_imdb_tables["title_basics"],
-    title_ratings_sdf=cleansed_imdb_tables["title_ratings"],
+    title_ratings_ssdf=cleansed_imdb_tables["title_ratings"],
     ranking_logics=ranking_logics,
 )
 
@@ -90,7 +90,7 @@ writer_options = {
 }
 
 query1 = (
-    top_10_movies_with_min_500_votes_sdf.writeStream.outputMode("complete")
+    top_10_movies_with_min_500_votes_ssdf.writeStream.outputMode("complete")
     .options(**writer_options)
     .format("console")
     .start()

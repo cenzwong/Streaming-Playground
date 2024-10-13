@@ -52,8 +52,8 @@ cleansed_imdb_tables = {
 from transformation.streaming import task0
 
 # %%
-title_movies_sdf = task0(
-    title_basics_sdf=cleansed_imdb_tables["title_basics"],
+title_movies_ssdf = task0(
+    title_basics_ssdf=cleansed_imdb_tables["title_basics"],
 )
 
 # %%
@@ -66,7 +66,7 @@ writer_options = {
 }
 
 query0 = (
-    title_movies_sdf.writeStream.outputMode("append")
+    title_movies_ssdf.writeStream.outputMode("append")
     .options(**writer_options)
     .format("json")
     .start()
